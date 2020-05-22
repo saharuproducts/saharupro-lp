@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
+
+    <title>サハルプロダクツ</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="./static/js/app.bundle.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+  <body>
+    <div class="body-bg"></div>
+    <div class="outer" id="outer">
+      <div class="header"></div>
+      <div class="top">
+        <div class="cover-bg">
+          <div class="cover-bg--a">
+            <img src="./static/image/decoration/bg-a.png" alt="" />
+          </div>
+          <div class="cover-bg--b">
+            <img src="./static/image/decoration/bg-b.png" alt="" />
+          </div>
+          <div class="cover-bg--c">
+            <img src="./static/image/decoration/bg-c.png" alt="" />
+          </div>
+          <div class="cover-bg--d">
+            <img src="./static/image/decoration/bg-d.png" alt="" />
+          </div>
+        </div>
+        <div class="top__frame">
+          <div class="top__frame__item"></div>
+        </div>
+        <div class="top__inner">
+          <div class="top__inner__logo">
+            <img src="./static/image/logo.png" alt="サハルプロダクツ" />
+          </div>
+        </div>
+      </div>
+      <div class="statement" id="statement">
+        <div class="statement__bg"></div>
+        <div class="sec-ttl scroll-anchor" id="bg-anchor1">
+          <div class="c-ttl--img">
+            <img src="./static/image/title/title_message.png" alt="Statement" />
+          </div>
+          <p class="c-ttl--sub">
+            メッセージ
+          </p>
+        </div>
+        <div class="statement__txt scroll-anchor">
+          <img src="./static/image/statement/text_state5.png" alt="" />
+        </div>
+      </div>
+      <div class="gallery">
+        <div class="cover-bg">
+          <div class="cover-bg--e">
+            <img src="./static/image/decoration/bg-e.png" alt="" />
+          </div>
+          <div class="cover-bg--f">
+            <img src="./static/image/decoration/bg-f.png" alt="" />
+          </div>
+          <div class="cover-bg--g">
+            <img src="./static/image/decoration/bg-g.png" alt="" />
+          </div>
+        </div>
+        <div class="gallery__inner">
+          <div class="sec-ttl scroll-anchor">
+            <div class="c-ttl--img">
+              <img
+                src="./static/image/title/title_products.png"
+                alt="Products"
+              />
+            </div>
+            <p class="c-ttl--sub">
+              プロダクト
+            </p>
+          </div>
+          <div class="gallery__slider scroll-anchor">
+            <ul class="gallery__slider__item">
+              <li
+                class="slick-slide slick-current slick-active"
+                data-slick-index="0"
+                aria-hidden="false"
+                tabindex="0"
+                role="tabpanel"
+                id="slick-slide00"
+                aria-describedby="slick-slide-control00"
+              >
+                <a href="./pages/wheatherill.html">
+                  <img
+                    class="slider-img"
+                    src="./static/image/gallery/01.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li
+                class="slick-slide slick-current slick-active"
+                data-slick-index="1"
+                aria-hidden="false"
+                tabindex="1"
+                role="tabpanel"
+                id="slick-slide01"
+                aria-describedby="slick-slide-control01"
+              >
+                <a href="./pages/vrt1.html">
+                  <img
+                    class="slider-img"
+                    src="./static/image/gallery/02.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <!-- <li
+                class="slick-slide slick-current slick-active"
+                data-slick-index="2"
+                aria-hidden="false"
+                tabindex="2"
+                role="tabpanel"
+                id="slick-slide02"
+                aria-describedby="slick-slide-control02"
+              >
+                <img
+                  class="slider-img"
+                  src="./static/image/gallery/03.jpg"
+                  alt=""
+                />
+              </li>
+              <li
+                class="slick-slide slick-current slick-active"
+                data-slick-index="3"
+                aria-hidden="false"
+                tabindex="3"
+                role="tabpanel"
+                id="slick-slide03"
+                aria-describedby="slick-slide-control03"
+              >
+                <img
+                  class="slider-img"
+                  src="./static/image/gallery/04.jpg"
+                  alt=""
+                />
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__inner">
+          <div class="sec-ttl scroll-anchor">
+            <div class="c-ttl--img">
+              <img
+                src="./static/image/title/title_member-white.png"
+                alt="Member"
+              />
+            </div>
+            <p class="c-ttl--sub">
+              メンバー
+            </p>
+          </div>
+          <ul class="profile__list">
+            <li class="profile__item scroll-anchor">
+              <div class="profile__item__left">
+                <img
+                  src="./static/image/member/arisaito.gif"
+                  alt="Arisa Ito アイコン"
+                />
+              </div>
+              <div class="profile__item__right">
+                <img
+                  class="c-name"
+                  src="./static/image/member/arisaito.png"
+                  alt="Arisa Ito"
+                />
+                <div class="profile__right__inner">
+                  <div class="sns-icon">
+                    <a href="https://www.arisaito.com" target="_blank"
+                      ><i class="fas fa-home"></i
+                    ></a>
+                    <a href="https://twitter.com/saharu54" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a
+                      href="https://www.instagram.com/______ai________/"
+                      target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                  <p class="c-discreption">
+                    コンテンポラリーアーティスト / デザイナー / コーダー
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="row profile__item scroll-anchor">
+              <div class="profile__item__left">
+                <img
+                  src="./static/image/member/rinneurabe.gif"
+                  alt="Rinne Urabe アイコン"
+                />
+              </div>
+              <div class="profile__item__right">
+                <img
+                  class="c-name"
+                  src="./static/image/member/rinneurabe.png"
+                  alt="Rinne Urabe"
+                />
+                <div class="sns-icon">
+                  <a href="https://twitter.com/rinneurabe" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="https://www.instagram.com/rinnelog/" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+                <p class="c-discreption">
+                  プランナー / デザイナー
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cover-bg">
+          <div class="cover-bg--h">
+            <img src="./static/image/decoration/bg-h.png" alt="" />
+          </div>
+          <div class="cover-bg--i">
+            <img src="./static/image/decoration/bg-i.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="contact container">
+        <div class="contact__inner">
+          <div class="sec-ttl scroll-anchor">
+            <div class="c-ttl--img">
+              <img src="./static/image/title/title_contact.png" alt="Contact" />
+            </div>
+            <p class="c-ttl--sub">
+              コンタクト
+            </p>
+          </div>
+          <p class="c-txt">コンタクトフォーム 準備中</p>
+          <p class="c-txt">お問い合わせ: saharu54@gmail.com</p>
+          <!-- <form
+            class="contact__form scroll-anchor"
+            action="mailto:saharu54@gmail.com"
+            method="post"
+            enctype="text/plain"
+          > -->
+          <!-- onsubmit="mailSend()" -->
+          <!-- <div class="form__item form-group">
+              <label for="name" class="c-txt">name*</label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                class=""
+                placeholder="Enter name"
+              />
+            </div>
+            <div class="form__item form-group">
+              <label for="mail" class="c-txt">mail*</label>
+              <input
+                type="email"
+                id="mail"
+                name="user_email"
+                class=""
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form__item form-group">
+              <label for="contents" class="c-txt">contents*</label>
+              <textarea id="contents" name="user_message" rows="5"></textarea>
+            </div>
+            <button
+              id="submit-btn"
+              class="contact-submit c-btn btn-primary"
+              type="submit"
+            >
+              送信
+            </button>
+          </form> -->
+        </div>
+      </div>
+      <div class="playground"></div>
+      <div class="footer">
+        <p class="c-txt--small">
+          Copyright© 2020 Saharu Products All Rights Reserved.
+        </p>
+      </div>
+    </div>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-light type="ambient"></a-light>
+      <a-light type="directional" position="-5 5 5" intensity="0.15"></a-light>
+      <a-entity>
+        <a-icosahedron
+          id="icosahedron"
+          position="0 1.7 -4"
+          radius="1.5"
+          color="#FFB6B9"
+          animation="property: rotation; from: 0 0 0; to: 360 360 0; dur: 5000; loop: true; easing: linear"
+        ></a-icosahedron>
+      </a-entity>
+      <a-entity
+        class="obj-wrapper"
+        id="obj-wrapper"
+        position="0 1.7 45"
+        animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 20000; loop: true; easing: linear"
+      ></a-entity>
+      <a-entity
+        camera="active: true"
+        id="default-camera"
+        position="0 1.5 0"
+      ></a-entity>
+      <a-entity
+        camera="active: false"
+        id="second-camera"
+        position="0 1.5 10"
+        animation="property: position; from: 0 1.5 0; to: 0 1.5 80; loop: true; dur: 7000; dir: alternate; startEvents: foo; easing: easeInOutQuart"
+      >
+      </a-entity>
+      <a-sky id="sky" color="#fcfbf7" material="transparent: true"></a-sky>
+    </a-scene>
+  </body>
+</html>
