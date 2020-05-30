@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wheatherill</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="../static/js/app.bundle.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -23,6 +25,7 @@
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
   <body>
+    <div class="cursor-follower" id="cursor-follower"></div>
     <div class="ind-page page">
       <div class="page__inner">
         <div class="sec-ttl">
@@ -75,7 +78,7 @@
         </p>
         <a href="../index.html" class="c-btn">
           <i class="fas fa-caret-left"></i>
-          もどる
+          BACK
         </a>
         <div class="footer">
           <p class="c-txt--small">
