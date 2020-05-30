@@ -9,7 +9,7 @@
     <title>サハルプロダクツ</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="./static/js/app.bundle.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
@@ -40,32 +40,33 @@
     <link rel="stylesheet" href="./static/css/style.css" />
   </head>
   <body>
+    <div class="cursor-follower" id="cursor-follower"></div>
     <div class="loading" id="loading">
-      <!-- <img
-        class="loading-txt"
-        src="./static/image/loading.gif"
-        alt="loading"
-        id="loading-txt"
-      /> -->
-      <p class="c-ttl" id="loading-txt">Loading...</p>
+      <p class="c-ttl" id="loading-txt">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+      </p>
     </div>
     <div class="body-bg"></div>
     <div class="outer" id="outer">
       <div class="header"></div>
       <div class="top">
         <div class="cover-bg">
-          <div class="cover-bg--a">
+          <div class="cover-bg--a cover-bg__item">
             <img src="./static/image/decoration/bg-a.png" alt="" />
           </div>
-          <div class="cover-bg--b">
+          <div class="cover-bg--b cover-bg__item">
             <img src="./static/image/decoration/bg-b.png" alt="" />
           </div>
-          <div class="cover-bg--c">
+          <div class="cover-bg--c cover-bg__item">
             <img src="./static/image/decoration/bg-c.png" alt="" />
           </div>
-          <div class="cover-bg--d">
+          <div class="cover-bg--d cover-bg__item">
             <img src="./static/image/decoration/bg-d.png" alt="" />
           </div>
+        </div>
+        <div class="scroll-down">
+          <p class="c-txt">SCROLL</p>
+          <div class="scroll-down__arrow"></div>
         </div>
         <div class="top__frame">
           <div class="top__frame__item"></div>
@@ -92,13 +93,13 @@
       </div>
       <div class="gallery">
         <div class="cover-bg">
-          <div class="cover-bg--e">
+          <div class="cover-bg--e cover-bg__item">
             <img src="./static/image/decoration/bg-e.png" alt="" />
           </div>
-          <div class="cover-bg--f">
+          <div class="cover-bg--f cover-bg__item">
             <img src="./static/image/decoration/bg-f.png" alt="" />
           </div>
-          <div class="cover-bg--g">
+          <div class="cover-bg--g cover-bg__item">
             <img src="./static/image/decoration/bg-g.png" alt="" />
           </div>
         </div>
@@ -238,10 +239,10 @@
           </ul>
         </div>
         <div class="cover-bg">
-          <div class="cover-bg--h">
+          <div class="cover-bg--h cover-bg__item">
             <img src="./static/image/decoration/bg-h.png" alt="" />
           </div>
-          <div class="cover-bg--i">
+          <div class="cover-bg--i cover-bg__item">
             <img src="./static/image/decoration/bg-i.png" alt="" />
           </div>
         </div>
