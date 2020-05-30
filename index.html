@@ -17,6 +17,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
       integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -80,19 +84,19 @@
       </div>
       <div class="nav-content is-hidden" id="nav-content">
         <ul class="nav-content__inner">
-          <li class="nav-content__item">
+          <li class="nav-content__item is-sequential">
             <a href="./index.html#top">Top</a>
           </li>
-          <li class="nav-content__item">
+          <li class="nav-content__item is-sequential">
             <a href="./index.html#message">Message</a>
           </li>
-          <li class="nav-content__item">
+          <li class="nav-content__item is-sequential">
             <a href="./index.html#product">Product</a>
           </li>
-          <li class="nav-content__item">
+          <li class="nav-content__item is-sequential">
             <a href="./index.html#member">Member</a>
           </li>
-          <li class="nav-content__item">
+          <li class="nav-content__item is-sequential">
             <a href="./index.html#contact">Contact</a>
           </li>
         </ul>
@@ -348,17 +352,16 @@
             <div class="form__item">
               <label>個人情報利用同意 [必須]</label>
               <input
+                class="c-checkbox"
                 type="checkbox"
                 name="個人情報利用同意"
                 data-formrun-required
               />
+              <div class="c-checkbox-parts"></div>
               <div data-formrun-show-if-error="個人情報利用同意">
                 同意してください
               </div>
             </div>
-
-            <!-- ボット投稿をブロックするためのタグ -->
-            <!-- ボット投稿をブロックするためのタグ -->
             <div class="_formrun_gotcha">
               <style media="screen">
                 ._formrun_gotcha {
