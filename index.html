@@ -10,6 +10,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
     <script src="./static/js/app.bundle.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
@@ -251,17 +252,99 @@
         <div class="contact__inner">
           <div class="sec-ttl scroll-anchor">
             <div class="c-ttl--img">
-              <img
-                src="./static/image/title/title_addition.png"
-                alt="Contact"
-              />
+              <img src="./static/image/title/title_contact.png" alt="Contact" />
             </div>
-          </div>
-          <!-- <p class="c-ttl--sub">
+            <p class="c-ttl--sub">
               コンタクト
             </p>
-          <p class="c-txt">コンタクトフォーム 準備中</p>
+          </div>
+          <!-- class, action, methodを変更しないでください -->
+          <form
+            class="formrun container"
+            action="https://form.run/api/v1/r/kii9s9ceauon4q1lz89m52lj"
+            method="post"
+          >
+            <!-- ↓自由に要素を追加・編集することができます -->
+            <div class="form__item row">
+              <label class="col-md-2">Name *</label>
+              <input class="col-md-4" name="Name" type="text" />
+            </div>
+            <div class="form__item row">
+              <label class="col-md-2">email *</label>
+              <input
+                class="col-md-4"
+                name="email"
+                type="text"
+                data-formrun-type="email"
+                data-formrun-required
+              />
+              <div data-formrun-show-if-error="メールアドレス">
+                メールアドレスを正しく入力してください
+              </div>
+            </div>
+            <div class="form__item row">
+              <label class="col-md-2">message *</label>
+              <textarea
+                class="col-md-4"
+                name="message"
+                data-formrun-required
+              ></textarea>
+              <div data-formrun-show-if-error="お問い合わせ">
+                お問い合わせ入力してください
+              </div>
+            </div>
+
+            <div class="form__item">
+              <label>個人情報利用同意 [必須]</label>
+              <input
+                type="checkbox"
+                name="個人情報利用同意"
+                data-formrun-required
+              />
+              <div data-formrun-show-if-error="個人情報利用同意">
+                同意してください
+              </div>
+            </div>
+
+            <!-- ボット投稿をブロックするためのタグ -->
+            <div class="_formrun_gotcha">
+              <style media="screen">
+                ._formrun_gotcha {
+                  position: absolute !important;
+                  height: 1px;
+                  width: 1px;
+                  overflow: hidden;
+                }
+              </style>
+              <label for="_formrun_gotcha"
+                >If you are a human, ignore this field</label
+              >
+              <input
+                type="text"
+                name="_formrun_gotcha"
+                id="_formrun_gotcha"
+                tabindex="-1"
+              />
+            </div>
+
+            <button
+              class="c-btn"
+              type="submit"
+              data-formrun-error-text="未入力の項目があります"
+              data-formrun-submitting-text="送信中..."
+            >
+              SEND
+            </button>
+          </form>
+
+          <!-- <p class="c-txt">コンタクトフォーム 準備中</p>
           <p class="c-txt">お問い合わせ: saharu54@gmail.com</p> -->
+          <script src="https://sdk.form.run/js/v2/embed.js"></script>
+          <div
+            class="formrun-embed"
+            data-formrun-form="@saharu--1590812424"
+            data-formrun-redirect="true"
+          ></div>
         </div>
       </div>
       <div class="playground"></div>
