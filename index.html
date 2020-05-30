@@ -40,7 +40,11 @@
     />
     <link rel="stylesheet" href="./static/css/style.css" />
     <!-- favicon & meta -->
-    <link rel="icon" href="https://saharu.work/static/image/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://saharu.work/static/image/favicon.ico"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -67,9 +71,35 @@
       </p>
     </div>
     <div class="body-bg"></div>
+    <div class="header">
+      <!-- <div id="nav-drawer"> -->
+      <div class="hamburger" id="hamburger">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </div>
+      <div class="nav-content is-hidden" id="nav-content">
+        <ul class="nav-content__inner">
+          <li class="nav-content__item">
+            <a href="./index.html#top">Top</a>
+          </li>
+          <li class="nav-content__item">
+            <a href="./index.html#message">Message</a>
+          </li>
+          <li class="nav-content__item">
+            <a href="./index.html#product">Product</a>
+          </li>
+          <li class="nav-content__item">
+            <a href="./index.html#member">Member</a>
+          </li>
+          <li class="nav-content__item">
+            <a href="./index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="outer" id="outer">
-      <div class="header"></div>
-      <div class="top">
+      <div class="top" id="top">
         <div class="cover-bg">
           <div class="cover-bg--a cover-bg__item">
             <img src="./static/image/decoration/bg-a.png" alt="" />
@@ -98,6 +128,7 @@
         </div>
       </div>
       <div class="statement" id="statement">
+        <div id="message"></div>
         <div class="statement__bg"></div>
         <div class="sec-ttl scroll-anchor" id="bg-anchor1">
           <div class="c-ttl--img">
@@ -111,7 +142,7 @@
           <img src="./static/image/statement/text_state5.png" alt="" />
         </div>
       </div>
-      <div class="gallery">
+      <div class="gallery" id="product">
         <div class="cover-bg">
           <div class="cover-bg--e cover-bg__item">
             <img src="./static/image/decoration/bg-e.png" alt="" />
@@ -175,7 +206,7 @@
           </div>
         </div>
       </div>
-      <div class="profile">
+      <div class="profile" id="member">
         <div class="profile__inner">
           <div class="sec-ttl scroll-anchor">
             <div class="c-ttl--img">
@@ -267,7 +298,7 @@
           </div>
         </div>
       </div>
-      <div class="contact container">
+      <div class="contact container" id="contact">
         <div class="contact__inner">
           <div class="sec-ttl scroll-anchor">
             <div class="c-ttl--img">
