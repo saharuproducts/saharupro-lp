@@ -11,6 +11,7 @@ let colorPreviewArc = null;
 let currentColorCode = null;
 let headerText = null;
 let isFirst = false;
+let isPC = false;
 
 const initWindow = () => {
   windowWidth = window.innerWidth;
@@ -22,6 +23,18 @@ const initWindow = () => {
     !navigator.mediaDevices.getUserMedia
   ) {
     console.log("このブラウザには対応していません。");
+  }
+  if (
+    navigator.userAgent.match(/(iPhone|iPod|Android.*Mobile)/i) ||
+    navigator.userAgent.match(/(iPad|(?!(Android.*Mobile)+)Android)/i)
+  ) {
+    return;
+  } else {
+    isPC = true;
+    windowWidth = window.innerHeight / 2;
+    windowHeight = window.innerHeight;
+    // showHowto();
+    return;
   }
 };
 
@@ -61,6 +74,11 @@ const getVideo = (isFirst) => {
 };
 
 const setVideo = () => {
+  // let setVideoWidth = 0;
+  // let setVideoHeight = 0;
+  // if (isPC) {
+  //   setVideoWidth = windowHeight / 2;
+  // }
   return {
     audio: false,
     video: {
@@ -70,7 +88,6 @@ const setVideo = () => {
       height: windowHeight,
       // height: { min: 720, max: 1080 },
       // width: { min: 1280, max: 1920 },
-      // height: { min: 720, max: 1080 },
     },
   };
 };
@@ -159,8 +176,8 @@ const showHeaderText = () => {
   headerText = document.getElementById("header-text");
   if (currentColorCode) {
     colorCodeText.innerText = currentColorCode;
-    // colorModal.style.background = currentColorCode;
     headerText.classList.remove("is-hidden");
+    navigator.clipboard.writeText(currentColorCode);
   }
   setTimeout(() => {
     hideHeaderText();
@@ -175,9 +192,6 @@ const createArcInstance = () => {
   const newArc = document.createElement("div");
   newArc.style.zIndex = 2;
   newArc.style.position = "fixed";
-  // newArc.style.bottom = 0;
-  // newArc.style.left = "50%";
-  // newArc.style.transform = "translateX(-50%)";
   newArc.style.borderRadius = "100rem";
   newArc.style.background = currentColorCode;
   newArc.style.width = arcWidth + "px";
