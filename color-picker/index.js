@@ -12,6 +12,7 @@ let currentColorCode = null;
 let headerText = null;
 let isFirst = false;
 let isPC = false;
+const cameraSize = { w: 1080, h: 1080 };
 
 const initWindow = () => {
   windowWidth = window.innerWidth;
@@ -33,15 +34,16 @@ const initWindow = () => {
     isPC = true;
     windowWidth = window.innerHeight / 2;
     windowHeight = window.innerHeight;
-    // showHowto();
+    canvas = document.querySelector("canvas");
+    canvas.style.top = "10%";
+    colorPreviewArc = document.getElementById("color-preview");
+    colorPreviewArc.style.bottom = "10%";
     return;
   }
 };
 
 const initVideoAsync = (status) => {
   video = document.getElementById("video");
-  video.addEventListener("loadedmetadata", adjustVideoSize);
-
   navigator.mediaDevices
     .enumerateDevices()
     .then((devices) => {
@@ -58,6 +60,7 @@ const getVideo = (isFirst) => {
   navigator.mediaDevices
     .getUserMedia(setVideo())
     .then(function (stream) {
+      console.log(stream);
       video.srcObject = stream;
       video.play();
       videoStream = stream;
@@ -74,50 +77,23 @@ const getVideo = (isFirst) => {
 };
 
 const setVideo = () => {
-  // let setVideoWidth = 0;
-  // let setVideoHeight = 0;
-  // if (isPC) {
-  //   setVideoWidth = windowHeight / 2;
-  // }
   return {
     audio: false,
     video: {
       deviceId: videoInput,
       facingMode: "environment",
-      width: windowWidth,
-      height: windowHeight,
       // height: { min: 720, max: 1080 },
       // width: { min: 1280, max: 1920 },
+      width: { ideal: 500 },
+      height: { ideal: 500 },
     },
   };
-};
-
-const adjustVideoSize = () => {
-  videoWidth = video.videoWidth;
-  videoHeight = video.videoHeight;
-
-  let videoAspect = videoWidth / videoHeight;
-  let windowAspect = windowWidth / windowHeight;
-
-  if (windowAspect < videoAspect) {
-    let newWidth = videoAspect * windowHeight;
-    video.style.width = newWidth + "px";
-    video.style.marginLeft = -(newWidth - windowWidth) / 2 + "px";
-    video.style.height = windowHeight + "px";
-    video.style.marginTop = "0px";
-  } else {
-    let newHeight = 1 / (videoAspect / windowWidth);
-    video.style.height = newHeight + "px";
-    video.style.marginTop = -(newHeight - windowHeight) / 2 + "px";
-    video.style.width = windowWidth + "px";
-    video.style.marginLeft = "0px";
-  }
 };
 
 const canvasUpdate = () => {
   canvas = document.getElementById("canvas");
   canvas.width = windowWidth;
-  canvas.height = windowHeight;
+  canvas.height = windowWidth;
   context = canvas.getContext("2d");
   context.beginPath();
   let arcRadius = windowWidth / 2 - 10;
@@ -125,8 +101,8 @@ const canvasUpdate = () => {
   if (!isFirst) setArcStyle();
   isFirst = true;
   context.arc(
-    windowWidth / 2,
-    windowHeight / 3,
+    canvas.width / 2,
+    canvas.height / 2,
     arcRadius,
     (0 * Math.PI) / 180,
     (360 * Math.PI) / 180
@@ -143,7 +119,12 @@ const setArcStyle = () => {
 
 const getColorFromCanvas = () => {
   let x = windowWidth / 2;
-  let y = windowHeight / 2 - arcWidth / 3;
+  let y;
+  if (isPC) {
+    y = windowHeight / 2 - arcWidth / 2;
+  } else {
+    y = windowHeight / 2 - arcWidth / 2 + arcWidth / 10;
+  }
   let imagedata = context.getImageData(x, y, 1, 1);
   let r = imagedata.data[0];
   let g = imagedata.data[1];
@@ -207,8 +188,4 @@ window.addEventListener("load", () => {
   initWindow();
   initAtachTrigger();
   initVideoAsync({ isFirst: true });
-});
-
-window.addEventListener("resize", () => {
-  adjustVideoSize();
 });
