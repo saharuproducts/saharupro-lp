@@ -19,7 +19,6 @@
       href="https://saharu.work/static/image/favicon.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@saharu54" />
     <meta property="og:url" content="https://saharu.work/" />
     <meta property="og:title" content="サハルプロダクツ" />
     <meta
@@ -31,19 +30,12 @@
       content="https://saharu.work/static/image/twi-card.png"
     />
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@500&display=swap"
       rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
@@ -63,18 +55,24 @@
     />
     <link rel="stylesheet" href="./static/css/style.css" />
 
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
-    <script src="./static/js/app.bundle.js"></script>
+    <script src="./static/js/script.bundle.js"></script>
   </head>
   <body>
     <div class="cursor-follower" id="cursor-follower"></div>
     <div class="loading" id="loading">
-      <p class="c-ttl" id="loading-txt">
-        <i class="fa fa-spinner fa-pulse fa-fw"></i>
-      </p>
+      <div class="la-ball-clip-rotate la-2x" id="loading-txt">
+        <div></div>
+      </div>
     </div>
     <div class="body-bg"></div>
     <div class="header">
@@ -138,24 +136,28 @@
         <div class="statement__bg"></div>
         <div class="sec-ttl scroll-anchor" id="bg-anchor1">
           <div class="c-ttl--img">
-            <img src="./static/image/title/title_message.png" alt="Statement" />
+            <img
+              src="./static/image/title/title_message.png"
+              alt="Statement"
+              loading="lazy"
+            />
           </div>
           <p class="c-ttl--sub">メッセージ</p>
         </div>
         <div class="statement__txt scroll-anchor">
-          <img src="./static/image/statement/text_state5.png" alt="" />
+          <img src="./static/image/statement/text_state5.png" loading="lazy" />
         </div>
       </div>
       <div class="gallery" id="product">
         <div class="cover-bg">
           <div class="cover-bg--e cover-bg__item">
-            <img src="./static/image/decoration/bg-e.png" alt="" />
+            <img src="./static/image/decoration/bg-e.png" />
           </div>
           <div class="cover-bg--f cover-bg__item">
-            <img src="./static/image/decoration/bg-f.png" alt="" />
+            <img src="./static/image/decoration/bg-f.png" />
           </div>
           <div class="cover-bg--g cover-bg__item">
-            <img src="./static/image/decoration/bg-g.png" alt="" />
+            <img src="./static/image/decoration/bg-g.png" />
           </div>
         </div>
         <div class="gallery__inner">
@@ -164,6 +166,7 @@
               <img
                 src="./static/image/title/title_products.png"
                 alt="Products"
+                loading="lazy"
               />
             </div>
             <p class="c-ttl--sub">プロダクト</p>
@@ -184,6 +187,7 @@
                     class="slider-img"
                     src="./static/image/gallery/01.png"
                     alt=""
+                    loading="lazy"
                   />
                 </a>
               </li>
@@ -201,6 +205,7 @@
                     class="slider-img"
                     src="./static/image/gallery/02.png"
                     alt=""
+                    loading="lazy"
                   />
                 </a>
               </li>
@@ -215,6 +220,7 @@
               <img
                 src="./static/image/title/title_member-white.png"
                 alt="Member"
+                loading="lazy"
               />
             </div>
             <p class="c-ttl--sub">メンバー</p>
@@ -225,6 +231,7 @@
                 <img
                   src="./static/image/member/arisaito.gif"
                   alt="Arisa Ito アイコン"
+                  loading="lazy"
                 />
               </div>
               <div class="profile__item__right">
@@ -232,23 +239,30 @@
                   class="c-name"
                   src="./static/image/member/arisaito.png"
                   alt="Arisa Ito"
+                  loading="lazy"
                 />
                 <div class="profile__right__inner">
                   <div class="sns-icon">
-                    <a href="https://www.arisaito.com" target="_blank"
+                    <a
+                      href="https://www.arisaito.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       ><i class="fas fa-home"></i
                     ></a>
-                    <a href="https://twitter.com/saharu54" target="_blank"
+                    <a
+                      href="https://twitter.com/saharu54"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       ><i class="fab fa-twitter"></i
                     ></a>
-                    <a
+                    <!-- <a
                       href="https://www.instagram.com/______ai________/"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       ><i class="fab fa-instagram"></i
-                    ></a>
+                    ></a> -->
                   </div>
                   <p class="c-discreption">
-                    コンテンポラリーアーティスト / デザイナー / コーダー
+                    アーティスト / エンジニア / デザイナー
                   </p>
                 </div>
               </div>
@@ -258,6 +272,7 @@
                 <img
                   src="./static/image/member/rinneurabe.gif"
                   alt="Rinne Urabe アイコン"
+                  loading="lazy"
                 />
               </div>
               <div class="profile__item__right">
@@ -265,36 +280,19 @@
                   class="c-name"
                   src="./static/image/member/rinneurabe.png"
                   alt="Rinne Urabe"
+                  loading="lazy"
                 />
-                <div class="sns-icon">
-                  <!-- <a
-                    href="https://www.youtube.com/channel/UCj4zhcelOdeFVJdibq_hBRQ"
-                    target="_blank"
-                    ><i class="fab fa-youtube"></i
-                  ></a> -->
-                  <!-- <a href="https://twitter.com/rinneurabe" target="_blank"
-                    ><i class="fab fa-twitter"></i
-                  ></a> -->
-                  <!-- <a
-                    href="https://www.instagram.com/rinneurabe/"
-                    target="_blank"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                  <a href="https://minne.com/@rinneurabe" target="_blank"
-                    ><i class="fas fa-store"></i
-                  ></a> -->
-                </div>
-                <p class="c-discreption">プランナー / デザイナー / vlogger</p>
+                <p class="c-discreption">プランナー / Vlogger</p>
               </div>
             </li>
           </ul>
         </div>
         <div class="cover-bg">
           <div class="cover-bg--h cover-bg__item">
-            <img src="./static/image/decoration/bg-h.png" alt="" />
+            <img src="./static/image/decoration/bg-h.png" loading="lazy" />
           </div>
           <div class="cover-bg--i cover-bg__item">
-            <img src="./static/image/decoration/bg-i.png" alt="" />
+            <img src="./static/image/decoration/bg-i.png" loading="lazy" />
           </div>
         </div>
       </div>
@@ -302,93 +300,22 @@
         <div class="contact__inner">
           <div class="sec-ttl scroll-anchor">
             <div class="c-ttl--img">
-              <img src="./static/image/title/title_contact.png" alt="Contact" />
+              <img
+                src="./static/image/title/title_contact.png"
+                alt="Contact"
+                loading="lazy"
+              />
             </div>
             <p class="c-ttl--sub">コンタクト</p>
           </div>
           <p class="c-ttl--sub">
-            現在コンタクト調整中です。<br />ご連絡は Arisa Ito
-            のTwitterDMへお問い合わせください。
+            お問い合わせは<a
+              href="https://twitter.com/saharu54"
+              target="_blank"
+              rel="noopener noreferrer"
+              >代表のTwitterDM</a
+            >まで
           </p>
-          <!-- class, action, methodを変更しないでください -->
-          <!-- <form
-            class="formrun container"
-            action="https://form.run/api/v1/r/kii9s9ceauon4q1lz89m52lj"
-            method="post"
-          > -->
-          <!-- ↓自由に要素を追加・編集することができます -->
-          <!-- <div class="form__item row">
-              <label class="col-md-2">Name *</label>
-              <input class="col-md-4" name="Name" type="text" />
-            </div>
-            <div class="form__item row">
-              <label class="col-md-2">Email *</label>
-              <input
-                class="col-md-4"
-                name="email"
-                type="text"
-                data-formrun-type="email"
-                data-formrun-required
-              />
-              <div data-formrun-show-if-error="メールアドレス">
-                メールアドレスを正しく入力してください
-              </div>
-            </div>
-            <div class="form__item row">
-              <label class="col-md-2">Message *</label>
-              <textarea
-                class="col-md-4"
-                name="message"
-                data-formrun-required
-                rows="5"
-              ></textarea>
-              <div data-formrun-show-if-error="お問い合わせ">
-                お問い合わせ入力してください
-              </div>
-            </div>
-
-            <div class="form__item">
-              <label>個人情報利用同意 [必須]</label>
-              <input
-                class="c-checkbox"
-                type="checkbox"
-                name="個人情報利用同意"
-                data-formrun-required
-              />
-              <div class="c-checkbox-parts"></div>
-              <div data-formrun-show-if-error="個人情報利用同意">
-                同意してください
-              </div>
-            </div>
-            <div class="_formrun_gotcha">
-              <style media="screen">
-                ._formrun_gotcha {
-                  position: absolute !important;
-                  height: 1px;
-                  width: 1px;
-                  overflow: hidden;
-                }
-              </style>
-              <label for="_formrun_gotcha"
-                >If you are a human, ignore this field</label
-              >
-              <input
-                type="text"
-                name="_formrun_gotcha"
-                id="_formrun_gotcha"
-                tabindex="-1"
-              />
-            </div>
-
-            <button
-              class="c-btn"
-              type="submit"
-              data-formrun-error-text="未入力の項目があります"
-              data-formrun-submitting-text="送信中..."
-            >
-              送信
-            </button>
-          </form> -->
         </div>
       </div>
       <div class="playground"></div>
