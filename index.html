@@ -23,7 +23,7 @@
     <meta property="og:title" content="サハルプロダクツ" />
     <meta
       property="og:description"
-      content="世界を少しだけ味方につけるプロダクトブランド"
+      content="世界を少しだけ味方につけるプロダクト"
     />
     <meta
       property="og:image"
@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
     <link
@@ -85,11 +85,11 @@
     <div class="body-bg"></div>
     <div class="header">
       <!-- <div id="nav-drawer"> -->
-      <div class="hamburger" id="hamburger">
+      <!-- <div class="hamburger" id="hamburger">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
-      </div>
+      </div> -->
       <div class="nav-content is-hidden" id="nav-content">
         <ul class="nav-content__inner">
           <li class="nav-content__item is-sequential">
@@ -126,10 +126,10 @@
             <img src="./static/image/decoration/bg-d.png" alt="" />
           </div>
         </div>
-        <div class="scroll-down">
+        <!-- <div class="scroll-down">
           <p class="c-txt">SCROLL</p>
           <div class="scroll-down__arrow"></div>
-        </div>
+        </div> -->
         <div class="top__frame">
           <div class="top__frame__item"></div>
         </div>
@@ -140,20 +140,19 @@
         </div>
       </div>
       <div class="statement" id="statement">
-        <div id="message"></div>
         <div class="statement__bg"></div>
-        <div class="sec-ttl scroll-anchor" id="bg-anchor1">
-          <div class="c-ttl--img">
-            <img
-              src="./static/image/title/title_message.png"
-              alt="Statement"
-              loading="lazy"
-            />
+        <div class="wrapper">
+          <div class="sec-ttl scroll-anchor" id="bg-anchor1">
+            <div class="c-ttl">Statement</div>
           </div>
-          <p class="c-ttl--sub">メッセージ</p>
-        </div>
-        <div class="statement__txt scroll-anchor">
-          <img src="./static/image/statement/text_state5.png" loading="lazy" />
+          <div class="statement__txt scroll-anchor">
+            <p>
+              どれだけ傷つき、ひとりで、怖くなっても希望の全てを捨てない。<br />
+              勇気を持って言う。<br /><br />
+              世界を少しだけ味方につけるプロダクト<br />
+              サハルプロダクツ
+            </p>
+          </div>
         </div>
       </div>
       <div class="gallery" id="product">
@@ -170,14 +169,7 @@
         </div>
         <div class="gallery__inner">
           <div class="sec-ttl scroll-anchor">
-            <div class="c-ttl--img">
-              <img
-                src="./static/image/title/title_products.png"
-                alt="Products"
-                loading="lazy"
-              />
-            </div>
-            <p class="c-ttl--sub">プロダクト</p>
+            <div class="c-ttl">Products</div>
           </div>
           <div class="gallery__slider scroll-anchor">
             <ul class="gallery__slider__item">
@@ -190,7 +182,7 @@
                 id="slick-slide00"
                 aria-describedby="slick-slide-control00"
               >
-                <a href="./pages/wheatherill.html">
+                <a href="./pages/weatherill/index.html">
                   <img
                     class="slider-img"
                     src="./static/image/gallery/01.png"
@@ -224,14 +216,7 @@
       <div class="profile" id="member">
         <div class="profile__inner">
           <div class="sec-ttl scroll-anchor">
-            <div class="c-ttl--img">
-              <img
-                src="./static/image/title/title_member-white.png"
-                alt="Member"
-                loading="lazy"
-              />
-            </div>
-            <p class="c-ttl--sub">メンバー</p>
+            <div class="c-ttl">Member</div>
           </div>
           <ul class="profile__list">
             <li class="profile__item scroll-anchor">
@@ -243,13 +228,11 @@
                 />
               </div>
               <div class="profile__item__right">
-                <img
-                  class="c-name"
-                  src="./static/image/member/arisaito.png"
-                  alt="Arisa Ito"
-                  loading="lazy"
-                />
+                <p class="c-name">Arisa Ito</p>
                 <div class="profile__right__inner">
+                  <p class="c-discreption">
+                    アーティスト / エンジニア / デザイナー
+                  </p>
                   <div class="sns-icon">
                     <a
                       href="https://www.arisaito.com"
@@ -263,15 +246,7 @@
                       rel="noopener noreferrer"
                       ><i class="fab fa-twitter"></i
                     ></a>
-                    <!-- <a
-                      href="https://www.instagram.com/______ai________/"
-                      target="_blank" rel="noopener noreferrer"
-                      ><i class="fab fa-instagram"></i
-                    ></a> -->
                   </div>
-                  <p class="c-discreption">
-                    アーティスト / エンジニア / デザイナー
-                  </p>
                 </div>
               </div>
             </li>
@@ -284,13 +259,8 @@
                 />
               </div>
               <div class="profile__item__right">
-                <img
-                  class="c-name"
-                  src="./static/image/member/rinneurabe.png"
-                  alt="Rinne Urabe"
-                  loading="lazy"
-                />
-                <p class="c-discreption">プランナー / Vlogger</p>
+                <p class="c-name">Rinne Urabe</p>
+                <p class="c-discreption">プランナー / デザイナー</p>
               </div>
             </li>
           </ul>
@@ -307,21 +277,14 @@
       <div class="contact container" id="contact">
         <div class="contact__inner">
           <div class="sec-ttl scroll-anchor">
-            <div class="c-ttl--img">
-              <img
-                src="./static/image/title/title_contact.png"
-                alt="Contact"
-                loading="lazy"
-              />
-            </div>
-            <p class="c-ttl--sub">コンタクト</p>
+            <div class="c-ttl">Contact</div>
           </div>
-          <p class="c-ttl--sub">
+          <p class="c-txt scroll-anchor">
             お問い合わせは<a
               href="https://twitter.com/saharu54"
               target="_blank"
               rel="noopener noreferrer"
-              >代表のTwitterDM</a
+              >TwitterDM</a
             >まで
           </p>
         </div>
