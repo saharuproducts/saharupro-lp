@@ -23,7 +23,7 @@
     <meta property="og:title" content="サハルプロダクツ" />
     <meta
       property="og:description"
-      content="世界を少しだけ味方にするプロダクト"
+      content="世界をすこしだけ味方にするプロダクトを考える"
     />
     <meta
       property="og:image"
@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=M+PLUS+Rounded+1c&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=M+PLUS+Rounded+1c&family=Croissant+One&display=swap"
       rel="stylesheet"
     />
     <link
@@ -141,18 +141,19 @@
       </div>
       <div class="statement" id="statement">
         <div class="statement__bg"></div>
-        <div class="wrapper">
-          <div class="sec-ttl scroll-anchor" id="bg-anchor1">
-            <div class="c-ttl">Statement</div>
+        <div class="statement__wrapper" id="bg-anchor1">
+          <div class="statement__rectangle" id="statement__rectangle"></div>
+          <!-- <div class="sec-ttl scroll-anchor statement__left" id="bg-anchor1">
+            <p class="c-ttl">Statement</p>
           </div>
-          <div class="statement__txt scroll-anchor">
+          <div class="statement__txt scroll-anchor statement__right">
             <p>
-              どれだけ傷つき、ひとりで、怖くなっても希望の全てを捨てない。<br />
-              勇気をもって言う。<br /><br />
-              世界を少しだけ味方にするプロダクト<br />
+              どれだけ傷つき、ひとりで、怖くなっても<br />
+              希望の全てを捨てない在り方をさがす。<br /><br />
+              世界をすこしだけ味方にするプロダクトを考える<br />
               サハルプロダクツ
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="gallery" id="product">
@@ -161,17 +162,27 @@
             <img src="./static/image/decoration/bg-e.png" />
           </div>
           <div class="cover-bg--f cover-bg__item">
-            <img src="./static/image/decoration/bg-f.png" />
-          </div>
-          <div class="cover-bg--g cover-bg__item">
-            <img src="./static/image/decoration/bg-g.png" />
+            <img src="./static/image/decoration/bg-c.png" />
           </div>
         </div>
         <div class="gallery__inner">
-          <div class="sec-ttl scroll-anchor">
+          <!-- <div class="sec-ttl scroll-anchor">
             <div class="c-ttl">Products</div>
-          </div>
-          <div class="gallery__slider scroll-anchor">
+          </div> -->
+          <ul class="gallery__list">
+            <li class="gallery__list__item scroll-anchor">
+              <a href="./pages/weatherill/index.html">
+                <div class="gallery__img"></div>
+              </a>
+            </li>
+            <li class="gallery__list__item scroll-anchor">
+              <a href="./pages/vrt1.html">
+                <div class="gallery__img"></div>
+              </a>
+            </li>
+          </ul>
+
+          <!-- <div class="gallery__slider scroll-anchor">
             <ul class="gallery__slider__item">
               <li
                 class="slick-slide slick-current slick-active"
@@ -210,21 +221,63 @@
                 </a>
               </li>
             </ul>
+          </div> -->
+        </div>
+        <div class="cover-bg">
+          <div class="cover-bg--h cover-bg__item">
+            <img src="./static/image/decoration/bg-c.png" loading="lazy" />
+          </div>
+          <div class="cover-bg--i cover-bg__item">
+            <img src="./static/image/decoration/bg-i.png" loading="lazy" />
           </div>
         </div>
       </div>
       <div class="profile" id="member">
         <div class="profile__inner">
-          <div class="sec-ttl scroll-anchor">
+          <!-- <div class="sec-ttl scroll-anchor">
             <div class="c-ttl">Member</div>
+          </div> -->
+          <div class="profile__txt">
+            <p>MEMBER：</p>
+            <span class="profile__txt__icon">●</span>
+            <!-- <img
+              src="./static/image/member/arisaito.gif"
+              alt="Arisa Ito アイコン"
+            /> -->
+            <p>Arisa Ito - Developer, Designer</p>
+            <a
+              href="https://arisaitodev.studio.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Web</a
+            >
+            <a
+              href="https://twitter.com/saharu54"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SNS</a
+            >　
+            <!-- <img
+              src="./static/image/member/rinneurabe.gif"
+              alt="Rinne Urabe アイコン"
+            /> -->
+            <span class="profile__txt__icon">●</span>
+            <p>Rinne Urabe - Planner, Designer</p>
+            <p>
+              ｜お問い合わせはこちら<a
+                href="https://twitter.com/saharu54"
+                target="_blank"
+                rel="noopener noreferrer"
+                >DM</a
+              >
+            </p>
           </div>
-          <ul class="profile__list">
+          <!-- <ul class="profile__list">
             <li class="profile__item scroll-anchor">
               <div class="profile__item__left">
                 <img
                   src="./static/image/member/arisaito.gif"
                   alt="Arisa Ito アイコン"
-                  loading="lazy"
                 />
               </div>
               <div class="profile__item__right">
@@ -253,7 +306,6 @@
                 <img
                   src="./static/image/member/rinneurabe.gif"
                   alt="Rinne Urabe アイコン"
-                  loading="lazy"
                 />
               </div>
               <div class="profile__item__right">
@@ -261,18 +313,19 @@
                 <p class="c-discreption">プランナー / デザイナー</p>
               </div>
             </li>
-          </ul>
+          </ul> -->
         </div>
-        <div class="cover-bg">
-          <div class="cover-bg--h cover-bg__item">
-            <img src="./static/image/decoration/bg-h.png" loading="lazy" />
-          </div>
-          <div class="cover-bg--i cover-bg__item">
-            <img src="./static/image/decoration/bg-i.png" loading="lazy" />
-          </div>
-        </div>
+
+        <!-- <p class="c-txt scroll-anchor">
+          お問い合わせは<a
+            href="https://twitter.com/saharu54"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TwitterDM</a
+          >まで
+        </p> -->
       </div>
-      <div class="contact container" id="contact">
+      <!-- <div class="contact container" id="contact">
         <div class="contact__inner">
           <div class="sec-ttl scroll-anchor">
             <div class="c-ttl">Contact</div>
@@ -286,7 +339,7 @@
             >まで
           </p>
         </div>
-      </div>
+      </div> -->
       <div class="playground"></div>
       <div class="footer">
         <p class="c-txt--small">
